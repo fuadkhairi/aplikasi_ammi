@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        aktivitasfisikButton = findViewById(R.id.menuInputAktifitas);
+        aktivitasfisikButton = findViewById(R.id.menuKeteranganAktifitas);
         aktivitasfisikButton.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, AktivitasfisikActivity.class);
             startActivity(intent);
