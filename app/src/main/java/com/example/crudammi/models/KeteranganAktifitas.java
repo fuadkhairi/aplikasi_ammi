@@ -8,7 +8,15 @@ public class KeteranganAktifitas {
     @Expose
     String idAktifitas;
 
-    @SerializedName("ket_aktifitas")
+    @SerializedName("ket_aktivitas")
     @Expose
     String ketAktifitas;
+
+    public String getIdAktifitas() {
+        return idAktifitas;
+    }
+
+    public String getKetAktifitas() {
+        return ketAktifitas;
+    }
 }

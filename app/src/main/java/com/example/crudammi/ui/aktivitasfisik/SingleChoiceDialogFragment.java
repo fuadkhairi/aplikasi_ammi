@@ -16,6 +16,8 @@ public class SingleChoiceDialogFragment extends DialogFragment {
 
     int position=0; //default selected position
 
+    String[] list;
+
     public interface SingleChoiceListener{
         void onPositivButtonClicked(String[] list,int position);
         void onNegativeButtonClicked();
@@ -39,29 +41,13 @@ public class SingleChoiceDialogFragment extends DialogFragment {
 
         AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
 
-        String[] list=getActivity().getResources().getStringArray(R.array.lama_beraktivitas);
+        //list=getActivity().getResources().getStringArray(R.array.lama_beraktivitas);
+        list = AktivitasfisikActivity.list;
 
         builder.setTitle("Select Lama Beraktivitas Anda")
-                .setSingleChoiceItems(list, position, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        position = i;
-                    }
-                })
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        mListener.onPositivButtonClicked(list,position);
-
-                    }
-                })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        mListener.onNegativeButtonClicked();
-
-                    }
-                });
+                .setSingleChoiceItems(list, position, (dialogInterface, i) -> position = i)
+                .setPositiveButton("OK", (dialogInterface, i) -> mListener.onPositivButtonClicked(list,position))
+                .setNegativeButton("Cancel", (dialogInterface, i) -> mListener.onNegativeButtonClicked());
 
         return builder.create();
     }
