@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.crudammi">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_local_hospital_black_24dp"
+        android:label="Deteksi Jantung"
+        android:roundIcon="@drawable/ic_local_hospital_black_24dp"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.aktivitasfisik.AktivitasfisikActivity"></activity>
+        <activity android:name=".ui.riwayatpenyakit.RiwayatpenyakitActivity" />
+        <activity android:name=".ui.imt.ImtActivity" />
+        <activity android:name=".ui.imt.IMTActivity" />
+        <activity android:name=".ui.user.AddUserAcitivty" />
+        <activity android:name=".ui.user.UserActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

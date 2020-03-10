@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.user.AddUserAcitivty">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/nameET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="masukkan nama.."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/genderET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="masukkan gender.."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/umurET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:inputType="numberSigned"
+                android:hint="masukkan umur.."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/nohpET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="masukkan no hp.."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/nohpkeluargaET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="masukkan no hp keluarga.."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/alamatET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="masukkan alamat.."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/tahunJantungET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:inputType="numberSigned"
+                android:hint="masukkan tahun jantung.."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/pendidikanET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="masukkan pendidikan terkahir.."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/penghasilanET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="masukkan penghasilan bulanan.."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/pekerjaanET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="masukkan pekerjaan.."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/agamaET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="masukkan agama.."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/sukuET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="masukkan suku.."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/rokokET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="merokok? ya/tidak"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/addUserDataBTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="20dp"
+                android:text="Tambah Data User" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

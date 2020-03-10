@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CRUD Ammi</string>
+    <string-array name="lama_beraktivitas">
+        <item>150 menit/minggu</item>
+        <item>150-250 menit/minggu</item>
+        <item>225-420 menit/minggu</item>
+        <item>200-300 menit/minggu</item>
+    </string-array>
+</resources>
