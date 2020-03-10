@@ -1,80 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.riwayatpenyakit.RiwayatpenyakitActivity"
     android:orientation="vertical"
-    android:padding="15dp">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pilih Riwayat Penyakit Anda"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:layout_gravity="center_horizontal"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hipertensi"
-        android:id="@+id/check_hipertensi"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Diabetes Mellitus"
-        android:id="@+id/check_diabetes"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kolestrol"
-        android:id="@+id/check_kolestrol"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Asam Urat"
-        android:id="@+id/check_urat"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Asma"
-        android:id="@+id/check_asma"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gagal Ginjal"
-        android:id="@+id/check_ginjal"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stroke"
-        android:id="@+id/check_stroke"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gagal Jantung"
-        android:id="@+id/check_jantung"/>
+    android:gravity="center"
+    tools:context=".ui.riwayatpenyakit.Riwayatpenyakit">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Write Result"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/write_result"/>
+        android:id="@+id/btnRP"
+        android:text="Riwayat Penyakit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <TextView
+        android:id="@+id/textViewRP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/result"/>
+        android:text="Riwayat Penyakit Anda :"
+        android:textSize="20sp"/>
 
 </LinearLayout>

@@ -9,8 +9,8 @@
         android:roundIcon="@drawable/ic_local_hospital_black_24dp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.aktivitasfisik.AktivitasfisikActivity"></activity>
-        <activity android:name=".ui.riwayatpenyakit.RiwayatpenyakitActivity" />
+        <activity android:name=".ui.riwayatpenyakit.Riwayatpenyakit"></activity>
+        <activity android:name=".ui.aktivitasfisik.AktivitasfisikActivity" />
         <activity android:name=".ui.imt.ImtActivity" />
         <activity android:name=".ui.imt.IMTActivity" />
         <activity android:name=".ui.user.AddUserAcitivty" />

@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import com.example.crudammi.ui.aktivitasfisik.AktivitasfisikActivity;
 import com.example.crudammi.ui.imt.ImtActivity;
-import com.example.crudammi.ui.riwayatpenyakit.RiwayatpenyakitActivity;
+import com.example.crudammi.ui.riwayatpenyakit.Riwayatpenyakit;
 import com.example.crudammi.ui.user.UserActivity;
 
 
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         riwayatpenyakitButton = findViewById(R.id.menuRiwayatSakit);
         riwayatpenyakitButton.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, RiwayatpenyakitActivity.class);
+            Intent intent = new Intent(MainActivity.this, Riwayatpenyakit.class);
             startActivity(intent);
         });
 
