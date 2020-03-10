@@ -9,6 +9,18 @@
     android:padding="10dp"
     tools:context=".ui.imt.ImtActivity">
 
+    <Button
+        android:id="@+id/btnwanita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="wanita"/>
+
+    <Button
+        android:id="@+id/btnpria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="pria" />
+
     <EditText
         android:id="@+id/height"
         android:layout_width="match_parent"

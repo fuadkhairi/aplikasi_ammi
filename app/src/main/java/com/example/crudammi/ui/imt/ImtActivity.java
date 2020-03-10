@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.crudammi.R;
 
@@ -15,6 +16,10 @@ public class ImtActivity extends AppCompatActivity {
     EditText height, weight;
     TextView result;
     Button calculate;
+    Button wanita;
+    Button pria;
+
+    boolean isWanita = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +31,26 @@ public class ImtActivity extends AppCompatActivity {
         result = (TextView) findViewById(R.id.result);
         calculate = (Button) findViewById(R.id.calculate);
 
-        calculate.setOnClickListener(new View.OnClickListener() {
+        wanita = (Button) findViewById(R.id.btnwanita);
+        pria = (Button) findViewById(R.id.btnpria);
+
+        wanita.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                calculateBMI();
+                isWanita = true;
+                Toast.makeText(getBaseContext(), "wanita", Toast.LENGTH_LONG).show();
             }
         });
+
+        pria.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                isWanita = false;
+                Toast.makeText(getBaseContext(), "pria", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        calculate.setOnClickListener((view -> { calculateBMI();}));
     }
     private void calculateBMI () {
         String heightStr = height.getText() .toString();
@@ -43,30 +62,45 @@ public class ImtActivity extends AppCompatActivity {
 
             float bmi = weightValue / (heightValue * heightValue);
 
-            displayBMI(bmi);
+            if (isWanita) {
+                displayBMIperempuan(bmi);
+            } else {
+                displayBMIlaki(bmi);
+            }
+
+           // displayBMI(bmi);
 
         }
     }
 
-    private void displayBMI(float bmi){
+    private void displayBMIperempuan(float bmi){
         String bmiLabel = "";
 
-        if(Float.compare(bmi, 15f) <= 0){
-            bmiLabel = "very severely underweight";
-        } else if(Float.compare(bmi, 15f) > 0 && Float.compare(bmi, 16f) <= 0){
-            bmiLabel = "severely underweight";
-        } else if(Float.compare(bmi, 16f) > 0 && Float.compare(bmi, 18.5f) <= 0){
-            bmiLabel = "underweight";
-        } else if(Float.compare(bmi, 18.5f) > 0 && Float.compare(bmi, 25f) <= 0){
+        if(Float.compare(bmi, 17f) <= 0){
+            bmiLabel = "kurus";
+        } else if(Float.compare(bmi, 17f) > 0 && Float.compare(bmi, 23f) <= 0){
             bmiLabel = "normal";
-        } else if(Float.compare(bmi, 25f) > 0 && Float.compare(bmi, 30f) <= 0){
-            bmiLabel = "overweight";
-        } else if(Float.compare(bmi, 30f) > 0 && Float.compare(bmi, 35f) <= 0){
-            bmiLabel = "obese class I";
-        } else if(Float.compare(bmi, 35f) > 0 && Float.compare(bmi, 40f) <= 0){
-            bmiLabel = "obese class II";
+        } else if(Float.compare(bmi, 23f) > 0 && Float.compare(bmi, 27f) <= 0){
+            bmiLabel = "kegemukan";
         } else {
-            bmiLabel = "obese class III";
+            bmiLabel = "obesitas";
+        }
+
+        bmiLabel = bmi + "\n" + bmiLabel;
+        result.setText(bmiLabel);
+    }
+
+    private void displayBMIlaki(float bmi){
+        String bmiLabel = "";
+
+        if(Float.compare(bmi, 18f) <= 0){
+            bmiLabel = "kurus";
+        } else if(Float.compare(bmi, 18f) > 0 && Float.compare(bmi, 25f) <= 0){
+            bmiLabel = "normal";
+        } else if(Float.compare(bmi, 25f) > 0 && Float.compare(bmi, 27f) <= 0){
+            bmiLabel = "kegemukan";
+        } else {
+            bmiLabel = "obesitas";
         }
 
         bmiLabel = bmi + "\n" + bmiLabel;
