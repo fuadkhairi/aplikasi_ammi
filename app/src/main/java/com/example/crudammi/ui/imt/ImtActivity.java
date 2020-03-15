@@ -1,9 +1,15 @@
 package com.example.crudammi.ui.imt;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatRadioButton;
 
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethod;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -16,8 +22,8 @@ public class ImtActivity extends AppCompatActivity {
     EditText height, weight;
     TextView result;
     Button calculate;
-    Button wanita;
-    Button pria;
+    AppCompatRadioButton rbpria, rbwanita;
+    EditText lingkarPinggangET;
 
     boolean isWanita = true;
 
@@ -31,10 +37,12 @@ public class ImtActivity extends AppCompatActivity {
         result = (TextView) findViewById(R.id.result);
         calculate = (Button) findViewById(R.id.calculate);
 
-        wanita = (Button) findViewById(R.id.btnwanita);
-        pria = (Button) findViewById(R.id.btnpria);
+        rbpria = findViewById(R.id.rdpria);
+        rbwanita = findViewById(R.id.rdwanita);
 
-        wanita.setOnClickListener(new View.OnClickListener() {
+        lingkarPinggangET = findViewById(R.id.lingkarPinggang);
+
+        rbwanita.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 isWanita = true;
@@ -42,7 +50,7 @@ public class ImtActivity extends AppCompatActivity {
             }
         });
 
-        pria.setOnClickListener(new View.OnClickListener() {
+        rbpria.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 isWanita = false;
@@ -52,7 +60,26 @@ public class ImtActivity extends AppCompatActivity {
 
         calculate.setOnClickListener((view -> { calculateBMI();}));
     }
+    public void onRadioButtonClicked(View view){
+        boolean isSelected = ((AppCompatRadioButton)view).isChecked();
+        switch (view.getId()){
+            case R.id.rdpria:
+                if (isSelected){
+                    rbpria.setTextColor(Color.WHITE);
+                    rbwanita.setTextColor(Color.RED);
+                }
+                break;
+            case R.id.rdwanita:
+                if (isSelected){
+                    rbwanita.setTextColor(Color.WHITE);
+                    rbpria.setTextColor(Color.RED);
+                }
+                break;
+        }
+    }
     private void calculateBMI () {
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE); //
+        imm.hideSoftInputFromWindow(calculate.getWindowToken(), InputMethodManager.RESULT_UNCHANGED_SHOWN);
         String heightStr = height.getText() .toString();
         String weightStr = weight.getText() .toString();
 
@@ -69,6 +96,18 @@ public class ImtActivity extends AppCompatActivity {
             }
 
            // displayBMI(bmi);
+
+        }
+    }
+
+    private void calculateLingkarPinggang() {
+        int lingkarPinggang = Integer.parseInt(lingkarPinggangET.getText().toString());
+        if (isWanita) {
+            if (lingkarPinggang<80) {
+
+            }
+
+        } else {
 
         }
     }

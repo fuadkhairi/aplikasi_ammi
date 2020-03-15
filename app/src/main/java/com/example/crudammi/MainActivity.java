@@ -1,9 +1,13 @@
 package com.example.crudammi;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.crudammi.ui.aktivitasfisik.AktivitasfisikActivity;
 import com.example.crudammi.ui.imt.ImtActivity;
@@ -12,9 +16,10 @@ import com.example.crudammi.ui.user.UserActivity;
 
 
 public class MainActivity extends AppCompatActivity {
-    Button imtButton;
-    Button riwayatpenyakitButton;
-    Button aktivitasfisikButton;
+    CardView userButton;
+    CardView imtButton;
+    CardView riwayatpenyakitButton;
+    CardView aktivitasfisikButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //pasang button user ke yang dilayout, baru diset untuk buka aktivity user dari main activity
-        Button userButton = findViewById(R.id.menuUser);
+        userButton = findViewById(R.id.menuUser);
         userButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, UserActivity.class);
             startActivity(intent);
@@ -46,4 +51,5 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
+
 }

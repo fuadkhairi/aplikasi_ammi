@@ -12,7 +12,7 @@
 
     <TextView
         android:id="@+id/tvDisplayChoice"
-        android:text="Select Lama Beraktivitas"
+        android:text="Aktivitas Anda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"

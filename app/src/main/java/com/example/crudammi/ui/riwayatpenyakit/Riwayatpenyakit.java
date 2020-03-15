@@ -36,7 +36,7 @@ public class Riwayatpenyakit extends AppCompatActivity {
                 String[] colorsArray = new String[] {"Hipertensi", "Diabetes Mellitus", "Kolestrol", "Asam Urat", "Asma", "Gagal Ginjal", "Stroke", "Gagal Jantung", "Hipertensi"};
                 //Boolean array for initial selected items
                 final boolean[] checkedColorsArray = new boolean[] {
-                        true, //for hipertensi
+                        false, //for hipertensi
                         false, //for diabetes mellitus
                         false, // for kolestrol
                         false, // for asam urat
