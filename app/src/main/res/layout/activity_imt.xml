@@ -9,36 +9,6 @@
     android:padding="50dp"
     tools:context=".ui.imt.ImtActivity">
 
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <androidx.appcompat.widget.AppCompatRadioButton
-            android:id="@+id/rdpria"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/radio_button_left_selector"
-            android:button="@android:color/transparent"
-            android:checked="true"
-            android:drawableLeft="@drawable/ic_pria"
-            android:gravity="center"
-            android:onClick="onRadioButtonClicked"
-            android:textColor="@android:color/white" />
-
-        <androidx.appcompat.widget.AppCompatRadioButton
-            android:id="@+id/rdwanita"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jenis Kelamin"
-            android:textColor="@android:color/holo_red_light"
-            android:drawableLeft="@drawable/ic_wanita"
-            android:gravity="center"
-            android:button="@android:color/transparent"
-            android:background="@drawable/radio_button_right_selector"/>
-
-    </RadioGroup>
-
     <Button
         android:visibility="gone"
         android:id="@+id/btnwanita"
@@ -58,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="height"
+        android:hint="Tinggi Badan"
         android:inputType="number|numberDecimal"
         android:text="" />
 
@@ -67,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="weight"
+        android:hint="Berat Badan"
         android:inputType="number|numberDecimal"
         android:text="" />
 
@@ -85,20 +55,5 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textSize="24dp"/>
-
-    <EditText
-        android:id="@+id/lingkarPinggang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Masukkan ukuran lingkar pinggang anda"
-        android:inputType="number|numberDecimal"
-        android:text=""
-        />
-    <Button
-        android:id="@+id/calculateLingkarPinggang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CALCULATE"/>
 
 </LinearLayout>

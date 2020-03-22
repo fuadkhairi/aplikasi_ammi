@@ -63,6 +63,8 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ViewHo
             userNameTV =itemView.findViewById(R.id.userName);
             userUmurTV = itemView.findViewById(R.id.userUmur);
             userGenderTV = itemView.findViewById(R.id.userGender);
+
+
         }
     }
 }

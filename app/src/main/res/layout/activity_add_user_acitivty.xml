@@ -81,13 +81,6 @@
                 android:hint="masukkan pendidikan terkahir.."
                 android:layout_height="wrap_content"/>
 
-            <EditText
-                android:id="@+id/penghasilanET"
-                android:layout_width="match_parent"
-                android:layout_marginHorizontal="40dp"
-                android:layout_marginTop="20dp"
-                android:hint="masukkan penghasilan bulanan.."
-                android:layout_height="wrap_content"/>
 
             <EditText
                 android:id="@+id/pekerjaanET"
@@ -95,6 +88,14 @@
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="20dp"
                 android:hint="masukkan pekerjaan.."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/penghasilanET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="masukkan penghasilan bulanan.."
                 android:layout_height="wrap_content"/>
 
             <EditText
@@ -119,6 +120,14 @@
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="20dp"
                 android:hint="merokok? ya/tidak"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/alkoholET"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="konsumsi alkohol? ya/tidak"
                 android:layout_height="wrap_content"/>
 
             <Button

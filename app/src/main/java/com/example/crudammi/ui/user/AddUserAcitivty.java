@@ -41,11 +41,12 @@ public class AddUserAcitivty extends AppCompatActivity {
         EditText alamatET = findViewById(R.id.alamatET);
         EditText tahunJantungaET = findViewById(R.id.tahunJantungET);
         EditText pendTerakhirET = findViewById(R.id.pendidikanET);
-        EditText penghasilanET = findViewById(R.id.penghasilanET);
         EditText pekerjaanET = findViewById(R.id.pekerjaanET);
+        EditText penghasilanET = findViewById(R.id.penghasilanET);
         EditText agamaET = findViewById(R.id.agamaET);
         EditText sukuET = findViewById(R.id.sukuET);
         EditText rokokET = findViewById(R.id.rokokET);
+        EditText alkoholET = findViewById(R.id.alkoholET);
         Button tambahUser = findViewById(R.id.addUserDataBTN);
 
         tambahUser.setOnClickListener(v -> {
@@ -58,11 +59,12 @@ public class AddUserAcitivty extends AppCompatActivity {
             body.addProperty("alamat", alamatET.getText().toString());
             body.addProperty("tahun_jantung", tahunJantungaET.getText().toString());
             body.addProperty("pendidikan_terakhir", pendTerakhirET.getText().toString());
-            body.addProperty("penghasilan", penghasilanET.getText().toString());
             body.addProperty("pekerjaan", pekerjaanET.getText().toString());
+            body.addProperty("penghasilan", penghasilanET.getText().toString());
             body.addProperty("agama", agamaET.getText().toString());
             body.addProperty("suku", sukuET.getText().toString());
             body.addProperty("rokok", rokokET.getText().toString());
+            body.addProperty("alkohol", alkoholET.getText().toString());
             Log.d("payload: ", body.toString());
             getSingleUser(body);
         });

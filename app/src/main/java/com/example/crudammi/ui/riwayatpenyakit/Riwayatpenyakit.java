@@ -33,18 +33,18 @@ public class Riwayatpenyakit extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Riwayatpenyakit.this);
                 //String array for alert dialog multichoice items
-                String[] colorsArray = new String[] {"Hipertensi", "Diabetes Mellitus", "Kolestrol", "Asam Urat", "Asma", "Gagal Ginjal", "Stroke", "Gagal Jantung", "Hipertensi"};
+                String[] colorsArray = new String[] {"Asam Urat", "Asma", "Diabetes Mellitus", "Gagal Ginjal", "Hipertensi", "Jantung", "Kolestrol", "Stroke"};
                 //Boolean array for initial selected items
                 final boolean[] checkedColorsArray = new boolean[] {
-                        false, //for hipertensi
-                        false, //for diabetes mellitus
-                        false, // for kolestrol
-                        false, // for asam urat
-                        false, // for asma
+                        false, //for asam urat
+                        false, //for asma
+                        false, // for diabetes mellitus
+                        false, // for gagal ginjal
+                        false, // for hipertensi
                         false, //for gagal ginjal
-                        false, // for stroke
-                        false, //for gagal jantung
-                        false, //for hipertensi
+                        false, // for jantung
+                        false, //for kolestrol
+                        false, //for stroke
                 };
 
                 final List<String> colorList = Arrays.asList(colorsArray);

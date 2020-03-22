@@ -59,7 +59,8 @@ public class AktivitasfisikActivity extends AppCompatActivity implements SingleC
     @Override
     public void onPositivButtonClicked(String[] list, int position) {
         int idKeteranganAktifitas = position+1;
-        getSingleKeteranganAktifitas(String.valueOf(idKeteranganAktifitas));
+        //getSingleKeteranganAktifitas(String.valueOf(idKeteranganAktifitas));
+
     }
 
     @Override

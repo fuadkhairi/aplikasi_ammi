@@ -203,7 +203,96 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
               <androidx.cardview.widget.CardView
+                  android:id="@+id/menuJiwa"
+                  android:foreground="?android:attr/selectableItemBackground"
+                  android:clickable="true"
+                  android:layout_width="160dp"
+                  android:layout_height="190dp"
+                  android:layout_margin="10dp">
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      android:gravity="center">
+                      <ImageView
+                          android:layout_width="64dp"
+                          android:layout_height="64dp"
+                          android:background="@drawable/cerclebackgroundpurple"
+                          android:src="@drawable/ic_wb_incandescent_black_24dp"
+                          android:padding="10dp"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textStyle="bold"
+                          android:layout_marginTop="10dp"
+                          android:text="Tingkat Stress"/>
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="1dp"
+                          android:background="@color/lightgray"
+                          android:layout_margin="10dp"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:gravity="center"
+                          android:text="Isi Biodata"
+                          android:padding="5dp"
+                          android:textColor="@android:color/darker_gray"/>
+                  </LinearLayout>
+
+              </androidx.cardview.widget.CardView>
+
+              <androidx.cardview.widget.CardView
                   android:id="@+id/menuDiet"
+                  android:foreground="?android:attr/selectableItemBackground"
+                  android:clickable="true"
+                  android:layout_width="160dp"
+                  android:layout_height="190dp"
+                  android:layout_margin="10dp">
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      android:gravity="center">
+                      <ImageView
+                          android:layout_width="64dp"
+                          android:layout_height="64dp"
+                          android:background="@drawable/cerclebackgroundpink"
+                          android:src="@drawable/ic_restaurant_menu_black_24dp"
+                          android:padding="10dp"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textStyle="bold"
+                          android:layout_marginTop="10dp"
+                          android:text="Pola Diet"/>
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="1dp"
+                          android:background="@color/lightgray"
+                          android:layout_margin="10dp"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:gravity="center"
+                          android:text="Yang di Konsumsi"
+                          android:padding="5dp"
+                          android:textColor="@android:color/darker_gray"/>
+                  </LinearLayout>
+
+              </androidx.cardview.widget.CardView>
+
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:clipToPadding="false"
+              android:gravity="center"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <androidx.cardview.widget.CardView
+                  android:id="@+id/menuHitung"
                   android:foreground="?android:attr/selectableItemBackground"
                   android:clickable="true"
                   android:layout_width="340dp"
@@ -217,15 +306,15 @@
                       <ImageView
                           android:layout_width="64dp"
                           android:layout_height="64dp"
-                          android:background="@drawable/cerclebackgroundpurple"
-                          android:src="@drawable/ic_free_breakfast_black_24dp"
+                          android:background="@drawable/cerclebackgroundgreen"
+                          android:src="@drawable/ic_live_help_black_24dp"
                           android:padding="10dp"/>
                       <TextView
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
                           android:textStyle="bold"
                           android:layout_marginTop="10dp"
-                          android:text="Riwayat Diet"/>
+                          android:text="Hasil"/>
                       <View
                           android:layout_width="match_parent"
                           android:layout_height="1dp"
@@ -235,7 +324,7 @@
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
                           android:gravity="center"
-                          android:text="Makanan yang Dikonsumsi"
+                          android:text="Informasi Kesehatan"
                           android:padding="5dp"
                           android:textColor="@android:color/darker_gray"/>
                   </LinearLayout>
