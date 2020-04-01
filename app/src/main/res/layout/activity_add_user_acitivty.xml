@@ -114,21 +114,58 @@
                 android:hint="masukkan suku.."
                 android:layout_height="wrap_content"/>
 
-            <EditText
+            <TextView
                 android:id="@+id/rokokET"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="20dp"
-                android:hint="merokok? ya/tidak"
-                android:layout_height="wrap_content"/>
+                android:hint="Pilih status merokok:"
+                android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/radio"
+                    android:layout_width="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/radio_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="perokok"
+                        android:textSize="18sp"
+                        android:textColor="#6E6A6A" />
+
+                    <RadioButton
+                        android:id="@+id/radio_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="bekas perokok"
+                        android:textSize="18sp"
+                        android:textColor="#6E6A6A" />
+
+                    <RadioButton
+                        android:id="@+id/radio_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="bukan perokok"
+                        android:textSize="18sp"
+                        android:textColor="#6E6A6A"/>
+
+                </RadioGroup>
 
             <EditText
                 android:id="@+id/alkoholET"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="20dp"
-                android:hint="konsumsi alkohol? ya/tidak"
-                android:layout_height="wrap_content"/>
+                android:hint="konsumsi alkohol? ya/tidak" />
 
             <Button
                 android:id="@+id/addUserDataBTN"
