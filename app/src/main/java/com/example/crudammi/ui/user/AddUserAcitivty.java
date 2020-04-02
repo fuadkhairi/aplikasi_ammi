@@ -29,14 +29,26 @@ public class AddUserAcitivty extends AppCompatActivity {
     ProgressDialog progressDialog;
 
     private RadioGroup radioGroup;
-    private RadioButton radioButton;
-    private Button btnDisplay;
+    String rokokData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_user_acitivty);
 
+        radioGroup = findViewById(R.id.radio);
+        RadioButton radioButton = radioGroup.findViewById(radioGroup.getCheckedRadioButtonId());
 
+        rokokData = "";
+
+        radioGroup.setOnCheckedChangeListener((radioGroup, i) -> {
+            RadioButton rB = radioGroup.findViewById(radioGroup.getCheckedRadioButtonId());
+            boolean isChecked = rB.isChecked();
+            if (isChecked) {
+                rokokData = rB.getText().toString();
+                Toast.makeText(getBaseContext(), rokokData, Toast.LENGTH_SHORT).show();
+            }
+        });
 
         //inisialisasi progress dialog sebelum dipanggil
         progressDialog = new ProgressDialog(this);
@@ -60,7 +72,6 @@ public class AddUserAcitivty extends AppCompatActivity {
         Button tambahUser = findViewById(R.id.addUserDataBTN);
 
         tambahUser.setOnClickListener(v -> {
-            String rokok = addListenerOnButton();
             JsonObject body = new JsonObject();
             body.addProperty("nama", namaET.getText().toString());
             body.addProperty("gender", genderET.getText().toString());
@@ -74,7 +85,7 @@ public class AddUserAcitivty extends AppCompatActivity {
             body.addProperty("penghasilan", penghasilanET.getText().toString());
             body.addProperty("agama", agamaET.getText().toString());
             body.addProperty("suku", sukuET.getText().toString());
-            body.addProperty("rokok", rokok);
+            body.addProperty("rokok", rokokData);
             body.addProperty("alkohol", alkoholET.getText().toString());
             Log.d("payload: ", body.toString());
             getSingleUser(body);
@@ -107,21 +118,5 @@ public class AddUserAcitivty extends AppCompatActivity {
 
             }
         });
-    }
-
-    public String addListenerOnButton() {
-        radioGroup = (RadioGroup) findViewById(R.id.radio);
-        int selectedId = radioGroup.getCheckedRadioButtonId();
-
-        // find the radiobutton by returned id
-        radioButton = (RadioButton) findViewById(selectedId);
-//                radioButton = (RadioButton) findViewById(R.id.radio_one);
-//                radioButton = (RadioButton) findViewById(R.id.radio_two);
-//                radioButton = (RadioButton) findViewById(R.id.radio_three);
-
-        Toast.makeText(AddUserAcitivty.this, radioButton.getText().toString(), Toast.LENGTH_SHORT).show();
-        String data = "";
-        data = radioButton.getText().toString();
-        return data;
     }
 }
